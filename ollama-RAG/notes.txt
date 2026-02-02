@@ -1,0 +1,26 @@
+RAG:it’s a technique in AI where a language model (like GPT) doesn’t rely only on its internal knowledge
+ but retrieves relevant information from an external source
+ (like a database, documents, or vector store) to generate more accurate and up-to-date answers.
+
+EMBEDDINGS are numerical representations of data (like text, images, or audio) in a high-dimensional vector space. Think of them as “coordinates” that capture the meaning or semantics of the data.
+
+Example:
+
+Text: "I love pizza" → [0.12, -0.34, 0.88, ...] (a vector of numbers)
+
+Text: "Pizza is my favorite food" → [0.13, -0.30, 0.90, ...]
+
+Vectors that are semantically similar are close together in this space. So these two sentences above would have vectors close to each other.
+How embeddings relate to RAG
+
+RAG relies on retrieving relevant info. To do that efficiently, it uses embeddings:
+
+You convert your documents or knowledge base into embeddings.
+
+When a user asks a question, you convert the question into an embedding.
+
+You compare the question embedding with document embeddings (usually via cosine similarity) to find the most relevant documents.
+
+The retrieved documents are then fed to the language model to generate the final answer.
+
+So, embeddings are basically the bridge between a query and relevant knowledge in RAG.
