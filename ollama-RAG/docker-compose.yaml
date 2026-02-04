@@ -1,0 +1,11 @@
+services:
+  ragApp:
+    image: rag:1.2
+    ports:
+      - 8000:8000
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    environment:
+      - ENV=dev
+      - MODEL_NAME=tinyllama
+      - OLLAMA_HOST=host.docker.internal
